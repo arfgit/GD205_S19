@@ -36,7 +36,7 @@ public class BoardMovement : MonoBehaviour {
         //check if the players x and z position is the same as the destination
         if (playerPos.x == destination.position.x && 
             playerPos.z == destination.position.z){
-            playerPos += transform.up;
+            playerPos -= transform.up;
         }
         //check if player x/z same as hazard
         if (playerPos.x == hazard.position.x &&
@@ -44,6 +44,11 @@ public class BoardMovement : MonoBehaviour {
         {
             playerPos -= transform.up;
         }
+		if (playerPos.x == block.position.x &&
+            playerPos.z == block.position.z){
+
+			playerPos += transform.up;
+			}
 
         //update the position of the gameobject this is attached to
         transform.position = playerPos;
