@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 30
+  forceAmt: 15
 --- !u!1 &31768674
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 832542833}
-  forceAmt: 30
+  forceAmt: 15
 --- !u!1 &479007301
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 30
+  forceAmt: 15
 --- !u!1 &832542829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 30
+  forceAmt: 10
 --- !u!54 &1033440917
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1421,6 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cbd0f1001d64dac9f541e4b659895f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eatThresh: 0
   multiplier: 30
 --- !u!1 &1201451337
 GameObject:
@@ -1544,7 +1545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 30
+  forceAmt: 10
 --- !u!1 &2052032075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,4 +1668,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 30
+  forceAmt: 15

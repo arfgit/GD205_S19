@@ -5,6 +5,8 @@ using UnityEngine;
 public class PhysicsMove : MonoBehaviour
 {
    Rigidbody myRb;
+   int victimEaten = 1;
+   public int eatThresh = 3;
    public float multiplier = 10f;
 	// Use this for initialization
 	void Start () {
@@ -46,8 +48,22 @@ public class PhysicsMove : MonoBehaviour
         //we compare the transform of the thing that collided with us to the predator
         if (col.gameObject.CompareTag("Prey"))
         {
-            Destroy(col.gameObject);
-           
+                victimEaten++;
+            Destroy(col.gameObject); 
+            
+            if(victimEaten < eatThresh){
+                    //Destroy(gameObject);
+                transform.localScale += new Vector3(1f, 1f, 1f);
+
+            }
         }
-}       
+        if(col.gameObject.CompareTag("Pred")){
+                Destroy(gameObject);
+                }
+
+
+        }
 }
+
+
+
