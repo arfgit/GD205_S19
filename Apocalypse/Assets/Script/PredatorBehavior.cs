@@ -33,5 +33,14 @@ public class PredatorBehavior : MonoBehaviour
 		
 		}
 	}
+    void OnCollisionEnter(Collision col)
+    {
+        //we compare the transform of the thing that collided with us to the predator
+        if (col.gameObject.CompareTag("Avatar"))
+        {
+            Destroy(col.gameObject);
+
+        }
+    }
 
 }
