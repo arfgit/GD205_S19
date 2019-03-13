@@ -5,6 +5,7 @@ using UnityEngine;
 public class PredatorBehavior : MonoBehaviour
 {
  Rigidbody predRB; //store our rigidbody info to manipulate it
+ public float distThresh;
     public Transform prey; //store our prey transform... public so we can assign it in the inspector
     public float forceAmt; //how much force in a given direction to seek the prey
 
@@ -25,5 +26,12 @@ public class PredatorBehavior : MonoBehaviour
         //we use the add force function/method of rigidbody
         //to add force in the direction of the prey and multiply by an amount of force
         predRB.AddForce(preyDirection * forceAmt);
+
+        if (Vector3.Distance(prey.position, transform.position)<= distThresh){
+			predRB.AddForce(preyDirection * forceAmt);
+
+		
+		}
 	}
+
 }

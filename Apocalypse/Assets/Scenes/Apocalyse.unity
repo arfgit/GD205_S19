@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44659364, g: 0.4964301, b: 0.5748256, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 5
+  forceAmt: 15
 --- !u!1 &31768674
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,8 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936373f294dfb4095ae6760a49c19fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prey: {fileID: 2052032079}
-  forceAmt: 5
+  distThresh: 15
+  prey: {fileID: 1158836565}
+  forceAmt: 15
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 832542833}
-  forceAmt: 10
+  forceAmt: 15
 --- !u!1 &479007301
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,8 +765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936373f294dfb4095ae6760a49c19fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distThresh: 15
   prey: {fileID: 1158836565}
-  forceAmt: 5
+  forceAmt: 15
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 723076700}
-  forceAmt: 7
+  forceAmt: 15
 --- !u!1 &832542829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,8 +1095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936373f294dfb4095ae6760a49c19fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prey: {fileID: 1201451341}
-  forceAmt: 5
+  distThresh: 15
+  prey: {fileID: 1158836565}
+  forceAmt: 15
 --- !u!1 &1135871184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1191,6 @@ GameObject:
   - component: {fileID: 1158836567}
   - component: {fileID: 1158836566}
   - component: {fileID: 1158836568}
-  - component: {fileID: 1158836569}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1296,19 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cbd0f1001d64dac9f541e4b659895f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1158836569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158836561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6395defc5a4d74fa9a813a9a333ff1a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
+  multiplier: 50
 --- !u!1 &1201451337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 5
+  forceAmt: 15
 --- !u!1 &2052032075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,4 +1544,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 3
+  forceAmt: 15
