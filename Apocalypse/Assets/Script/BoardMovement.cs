@@ -33,7 +33,7 @@ public class BoardMovement : MonoBehaviour {
         Vector3 newPos = playerPos;
 
    
-      /*   if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
         
             newPos = playerPos + transform.forward;
@@ -53,40 +53,40 @@ public class BoardMovement : MonoBehaviour {
         
             newPos = playerPos - transform.right;
         }
-*/
+
 
      
-        //bool inABlock = false;
+      bool inABlock = false;
 
       
-        // for (int i = 0; i < blocks.Length; i++)
-        // {	
+            for (int i = 0; i < blocks.Length; i++)
+        {	
      
-        //     if (newPos.x == blocks[i].transform.position.x &&
-        //         newPos.z == blocks[i].transform.position.z)
-        //     {
+            if (newPos.x == blocks[i].transform.position.x &&
+               newPos.z == blocks[i].transform.position.z)
+           {
            
-        //         inABlock = true;
-        //     }
-        // }
+               inABlock = true;
+             }
+       }
       
-        // if (!inABlock) {
-        // 	playerPos = newPos;
-        // }
+        if (!inABlock) {
+        	playerPos = newPos;
+       }
 
 
    
-       for (int i = 0; i < hazards.Length; i++){
+      // for (int i = 0; i < hazards.Length; i++){
        
-            if (playerPos.x == hazards[i].transform.position.x &&
+          /*  if (playerPos.x == hazards[i].transform.position.x &&
                     playerPos.z == hazards[i].transform.position.z)
-            {
+            { 
             	
                 playerPos = startPos;
              
                 playerMessage.text = "nice try";
             }
-        }
+        } */
 
 
         if (playerPos.x == destination.position.x && 
