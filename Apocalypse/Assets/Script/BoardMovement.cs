@@ -33,7 +33,7 @@ public class BoardMovement : MonoBehaviour {
         Vector3 newPos = playerPos;
 
    
-        if (Input.GetKeyDown(KeyCode.W))
+      /*   if (Input.GetKeyDown(KeyCode.W))
         {
         
             newPos = playerPos + transform.forward;
@@ -53,26 +53,26 @@ public class BoardMovement : MonoBehaviour {
         
             newPos = playerPos - transform.right;
         }
-
+*/
 
      
-        bool inABlock = false;
+        //bool inABlock = false;
 
       
-        for (int i = 0; i < blocks.Length; i++)
-        {	
+        // for (int i = 0; i < blocks.Length; i++)
+        // {	
      
-            if (newPos.x == blocks[i].transform.position.x &&
-                newPos.z == blocks[i].transform.position.z)
-            {
+        //     if (newPos.x == blocks[i].transform.position.x &&
+        //         newPos.z == blocks[i].transform.position.z)
+        //     {
            
-                inABlock = true;
-            }
-        }
+        //         inABlock = true;
+        //     }
+        // }
       
-        if (!inABlock) {
-        	playerPos = newPos;
-        }
+        // if (!inABlock) {
+        // 	playerPos = newPos;
+        // }
 
 
    
