@@ -26,7 +26,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
 
     }
+    public void GameOver(){
 
+        SceneManager.LoadScene("GameOver");
+
+    }
 
     
 }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 491644e3e2ffb426d957ca24a6de078c
   - enabled: 1
-    path: Assets/Scenes/Apocalyse.unity
+    path: Assets/Scenes/Apocalypse.unity
     guid: a43511620f41f478f9fece667244a84b
   - enabled: 1
     path: Assets/Scenes/Board.unity

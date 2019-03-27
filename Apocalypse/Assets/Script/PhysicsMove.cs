@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PhysicsMove : MonoBehaviour
 {
@@ -58,11 +59,23 @@ public class PhysicsMove : MonoBehaviour
             }
         }
         if(col.gameObject.CompareTag("Pred")){
-                Destroy(gameObject);
+                 Destroy(gameObject);
+                 SceneManager.LoadScene("GameOver");
                 }
 
+            }
 
-        }
+            
+    void OnTriggerEnter(Collider other){
+      if (other.tag == "Pred"){
+        SceneManager.LoadScene("GameOver");
+      }
+    }
+    
+
+
+        
+        
 }
 
 
