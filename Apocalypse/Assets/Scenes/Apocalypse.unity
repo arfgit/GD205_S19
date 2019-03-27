@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 11132805}
   m_Layer: 0
   m_Name: R
-  m_TagString: Untagged
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 15
+  forceAmt: 20
 --- !u!1 &31768674
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 199704037}
   m_Layer: 0
   m_Name: Y
-  m_TagString: Untagged
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 832542833}
-  forceAmt: 15
+  forceAmt: 20
 --- !u!1 &282818736
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -977,12 +978,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.21768154, y: -0, z: -0, w: 0.97601986}
-  m_LocalPosition: {x: 224, y: 119.57, z: 115.6}
+  m_LocalPosition: {x: 197.11, y: 113.1, z: 164.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25.146002, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8272923b129294e01b8abc51884423d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1158836561}
 --- !u!1 &588802787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1424,7 @@ GameObject:
   - component: {fileID: 723076702}
   m_Layer: 0
   m_Name: P
-  m_TagString: Untagged
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,7 +1530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 15
+  forceAmt: 20
 --- !u!1 &832542829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1931,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158836561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 190, y: 101.81, z: 176.1}
   m_LocalScale: {x: 3.6223, y: 3.6223, z: 3.6223}
   m_Children: []
@@ -2352,7 +2366,7 @@ GameObject:
   - component: {fileID: 2052032081}
   m_Layer: 0
   m_Name: E
-  m_TagString: Untagged
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2458,7 +2472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pred: {fileID: 99769245}
-  forceAmt: 15
+  forceAmt: 20
 --- !u!1 &2089958894
 GameObject:
   m_ObjectHideFlags: 0
