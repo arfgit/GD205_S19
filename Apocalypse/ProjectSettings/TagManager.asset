@@ -7,6 +7,8 @@ TagManager:
   - Prey
   - Pred
   - Avatar
+  - Good
+  - Bad
   layers:
   - Default
   - TransparentFX
