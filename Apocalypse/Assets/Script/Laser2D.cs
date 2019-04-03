@@ -11,8 +11,8 @@ public class Laser2D : MonoBehaviour
      public AudioSource soundEffect;
      public AudioSource bombEffect;
 
-     GameObject target;
-     GameObject bomb;
+     public GameObject[] target;
+     public GameObject[] bomb;
 
      public float numberTarget = 1f;
      public float targetThresh = 5f;
@@ -20,8 +20,8 @@ public class Laser2D : MonoBehaviour
 
      void Start(){
 
-         target = GameObject.FindGameObjectWithTag("Good");
-         bomb = GameObject.FindGameObjectWithTag("Pred");
+         target = GameObject.FindGameObjectsWithTag("Good");
+         bomb = GameObject.FindGameObjectsWithTag("Pred");
 
      }
     void Update()
@@ -31,6 +31,22 @@ public class Laser2D : MonoBehaviour
              {
                  soundEffect.Play();
              }
+            
+            if (target == null)
+             {
+                numberTarget++;
+
+            if (numberTarget == targetThresh)
+            {
+                SceneManager.LoadScene("WinCarv");
+
+            }
+        }
+        if (bomb == null)
+        {
+            SceneManager.LoadScene("GameOverCarv");
+
+        }
     
 
         }
@@ -42,23 +58,12 @@ public class Laser2D : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.Mouse0)) {
         Debug.Log ("I hit " + hit.collider.gameObject.name);
         Destroy(GameObject.Find(hit.collider.gameObject.name));
+            target = GameObject.FindGameObjectsWithTag("Good");
+            bomb = GameObject.FindGameObjectsWithTag("Pred");
         } else 
         {
         Debug.Log ("I hit nothing");
         }
-        if(target == null){
-            
-            numberTarget++;
-
-        if(numberTarget == targetThresh){
-        SceneManager.LoadScene("WinCarv");
-
-        }
-     }
-        if(bomb == null){
-         SceneManager.LoadScene("GameOverCarv");
-
-     }
 
 
 

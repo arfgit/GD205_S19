@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 1005537073}
   m_Layer: 0
   m_Name: LargeBomb
-  m_TagString: Bad
+  m_TagString: Pred
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 1463423796}
   m_Layer: 0
   m_Name: SmallBomb (1)
-  m_TagString: Bad
+  m_TagString: Pred
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1594,7 +1594,9 @@ MonoBehaviour:
   cam: {fileID: 2121805285}
   boomAMT: 0
   soundEffect: {fileID: 1951692903}
-  numberTarger: 5
+  bombEffect: {fileID: 0}
+  numberTarget: 1
+  targetThresh: 5
 --- !u!4 &1951692902
 Transform:
   m_ObjectHideFlags: 0
@@ -1603,7 +1605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951692900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3809744, y: -2.926596, z: 0.34160814}
+  m_LocalPosition: {x: -0.41, y: -2.926596, z: 0.34160814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1719,7 +1721,7 @@ GameObject:
   - component: {fileID: 1987908307}
   m_Layer: 0
   m_Name: SmallBomb
-  m_TagString: Bad
+  m_TagString: Pred
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1940,7 @@ GameObject:
   - component: {fileID: 2049606353}
   m_Layer: 0
   m_Name: MediumBomb
-  m_TagString: Bad
+  m_TagString: Pred
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
