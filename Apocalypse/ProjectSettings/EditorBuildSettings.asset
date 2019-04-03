@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e419d014b7bf246c7a8bc8519973769b
+  - enabled: 1
+    path: Assets/Scenes/ShootCarv.unity
+    guid: b1184849ded6a1a4eb0532270dce4237
+  - enabled: 1
+    path: Assets/Scenes/WinCarv.unity
+    guid: d1c92f74d77819c4f99922133e420938
+  - enabled: 1
+    path: Assets/Scenes/GameOverCarv.unity
+    guid: e49d8a1dcc291b741b158a88afb72500
   m_configObjects: {}

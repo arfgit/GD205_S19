@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Laser2D : MonoBehaviour
 {
@@ -8,6 +9,17 @@ public class Laser2D : MonoBehaviour
 
    public float boomAMT = 10f;
      public AudioSource soundEffect;
+
+     GameObject target;
+     GameObject bomb;
+
+
+     void Start(){
+
+         target = GameObject.FindGameObjectWithTag("Good");
+         bomb = GameObject.FindGameObjectWithTag("Bad");
+
+     }
     void Update()
     {
         Raycast();
@@ -30,14 +42,14 @@ public class Laser2D : MonoBehaviour
         {
         Debug.Log ("I hit nothing");
         }
+     if(bomb == null){
+        SceneManager.LoadScene("WinCarv");
+
+     }
 
 
     }
 
-    void OnCollisionEnter2D(Collision2D col){
-
-
-    }
 }
 
     

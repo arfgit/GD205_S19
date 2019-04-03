@@ -32,5 +32,16 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    public void GameOverCarv(){
+        SceneManager.LoadScene("GameOverCarv");
+
+
+    }
+
+    public void ShootCarv(){
+        SceneManager.LoadScene("ShootCarv");
+
+    }
+
     
 }
