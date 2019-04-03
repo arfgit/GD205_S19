@@ -7,19 +7,15 @@ public class Laser2D : MonoBehaviour
     public Camera cam;
 
    public float boomAMT = 10f;
-    public AudioClip soundEffect;
+     public AudioSource soundEffect;
     void Update()
     {
         Raycast();
-
-             if (Input.GetMouseButtonDown(0) == true)
+              if (Input.GetKeyDown(KeyCode.Mouse0))
              {
                  soundEffect.Play();
              }
-             if (Input.GetMouseButtonUp(0) == true)
-             {
-                soundEffect.Stop();
-             }
+    
 
         }
     void Raycast(){
