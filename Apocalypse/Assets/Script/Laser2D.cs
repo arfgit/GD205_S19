@@ -9,15 +9,19 @@ public class Laser2D : MonoBehaviour
 
    public float boomAMT = 10f;
      public AudioSource soundEffect;
+     public AudioSource bombEffect;
 
      GameObject target;
      GameObject bomb;
+
+     public float numberTarget = 1f;
+     public float targetThresh = 5f;
 
 
      void Start(){
 
          target = GameObject.FindGameObjectWithTag("Good");
-         bomb = GameObject.FindGameObjectWithTag("Bad");
+         bomb = GameObject.FindGameObjectWithTag("Pred");
 
      }
     void Update()
@@ -42,10 +46,21 @@ public class Laser2D : MonoBehaviour
         {
         Debug.Log ("I hit nothing");
         }
-     if(bomb == null){
+        if(target == null){
+            
+            numberTarget++;
+
+        if(numberTarget == targetThresh){
         SceneManager.LoadScene("WinCarv");
 
+        }
      }
+        if(bomb == null){
+         SceneManager.LoadScene("GameOverCarv");
+
+     }
+
+
 
 
     }
