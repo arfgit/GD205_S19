@@ -23,10 +23,11 @@ public class ElvisAnim : MonoBehaviour
             myAnim.SetInteger("state", 1);
 
             }
-            
-        if (Input.GetKeyDown(KeyCode.Space))
+         
+         myAnim.SetInteger("jump", 0);
+        if (Input.GetKey(KeyCode.Space))
         {
-            myAnim.SetInteger("state", 1);
+            myAnim.SetInteger("jump", 1);
 
         }
     }
