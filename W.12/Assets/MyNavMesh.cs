@@ -18,7 +18,19 @@ public class MyNavMesh : MonoBehaviour
  
     void Update()
     {
-        nav.destination = target.transform.position;
+        //nav.destination = target.transform.position;
+
+
+    }
+
+    void OnTriggerStay(Collider other){
+        Debug.Log("your trigger hit..." + other.name);
+            if(other.gameObject.CompareTag("Player")){
+                nav.destination = other.transform.position;
+
+
+        }
+
 
 
     }
