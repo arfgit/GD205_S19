@@ -42,6 +42,20 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("ShootCarv");
 
     }
+    public void CrazyFans(){
+        SceneManager.LoadScene("CrazyFans");
+
+    }
+
+     public void CrazyFansMenu(){
+        SceneManager.LoadScene("CrazyFansMenu");
+
+    }
+
+     public void CrazyFansControls(){
+        SceneManager.LoadScene("CrazyFansControls");
+
+    }
 
     
 }
