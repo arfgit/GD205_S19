@@ -8,7 +8,7 @@ public class MovementFP : MonoBehaviour
 {
     // variables //
      public float playerWalkingSpeed = 5f; //controls player walking speed
-    public float playerRunningSpeed = 10f; //controls players running speed
+    public float playerRunningSpeed = 12f; //controls players running speed
     public float jumpStrength = 5f; //controls player 
     public float verticalRotationLimit = 80f; //limits how high the person can look up and down on the vertical axis
     
