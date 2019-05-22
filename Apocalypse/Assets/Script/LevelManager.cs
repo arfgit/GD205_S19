@@ -43,19 +43,26 @@ public class LevelManager : MonoBehaviour
 
     }
     public void CrazyFans(){
-        SceneManager.LoadScene("CrazyFans");
+        SceneManager.LoadScene("GameFP");
 
     }
 
      public void CrazyFansMenu(){
-        SceneManager.LoadScene("CrazyFansMenu");
+        SceneManager.LoadScene("MenuFP");
 
     }
 
-     public void CrazyFansControls(){
-        SceneManager.LoadScene("CrazyFansControls");
+     public void CrazyFansWins(){
+        SceneManager.LoadScene("WinFP");
 
     }
+
+       public void CrazyFansLose(){
+        SceneManager.LoadScene("LoseFP");
+
+    }
+
+    
 
     
 }

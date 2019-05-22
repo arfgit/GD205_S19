@@ -14,30 +14,36 @@ public class Fan : MonoBehaviour
 
     public float rangeDamage; //var for ranged attacks
 
+    SpriteRenderer sr;
 
+
+    void Start()
+    {
+
+        sr=GetComponent<SpriteRenderer>();
+
+    }
     public void gunHit(int gunDamage)
     {
         Debug.Log("I hit " + gunDamage);
+        
         hP = hP - gunDamage;
-
+        
+        Death();
 
     }
+
 
     void Death(){
         if(hP <= 0)
         {
-            Die();
+             //Destroy(gameObject);
+            
         }
 
 
     }
 
-    void Die()
-    {
-
-
-        
-    }
 
 
 }

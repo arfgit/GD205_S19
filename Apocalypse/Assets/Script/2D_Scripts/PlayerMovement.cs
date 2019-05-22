@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,5 +36,14 @@ public class PlayerMovement : MonoBehaviour
         myRb.MovePosition(transform.position + change * speed * Time.deltaTime); //moving a small amount each frame
 
 
+    }
+
+      void OnCollisionEnter (Collision col){
+        if (col.gameObject.tag == "Finish") 
+        {
+      
+        SceneManager.LoadScene("WinFP");
+        }
+      
     }
 }

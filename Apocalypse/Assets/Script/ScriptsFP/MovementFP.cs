@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //attaches the component placed ot the character
 [RequireComponent(typeof(CharacterController))]
@@ -82,5 +83,13 @@ public class MovementFP : MonoBehaviour
         //moves the controller by motion
         cc.Move(transform.rotation * playerMovement * Time.deltaTime);
 
+    }
+      void OnCollisionEnter (Collision col){
+        if (col.gameObject.tag == "Finish") 
+        {
+      
+        SceneManager.LoadScene("WinFP");
+        }
+      
     }
 }

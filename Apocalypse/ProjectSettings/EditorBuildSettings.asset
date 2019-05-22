@@ -30,12 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOverCarv.unity
     guid: e49d8a1dcc291b741b158a88afb72500
   - enabled: 1
-    path: Assets/Scenes/CrazyFansMenu.unity
-    guid: bbae02d4248e29d46a5ecc6566296b74
+    path: Assets/Scenes/FP Scences/MenuFP.unity
+    guid: d6e2b755accdbc8499cbcb61bf6e4b80
   - enabled: 1
-    path: Assets/Scenes/CrazyFansControls.unity
-    guid: fce05ce9ed613b043862cb8b2c8e47a4
+    path: Assets/Scenes/FP Scences/GameFP.unity
+    guid: 5af6cc746775857428d7322d7c291561
   - enabled: 1
-    path: Assets/Scenes/CrazyFans.unity
-    guid: 6e58b13765868a14ea9429107c34df34
+    path: Assets/Scenes/FP Scences/LoseFP.unity
+    guid: 4ee3478be206c2540909ad823ae5fa9e
+  - enabled: 1
+    path: Assets/Scenes/FP Scences/WinFP.unity
+    guid: b1e7575df7b4b4a408bfea95a4c9411a
   m_configObjects: {}
