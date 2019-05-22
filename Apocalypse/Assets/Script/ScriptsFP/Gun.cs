@@ -10,8 +10,9 @@ public class Gun : MonoBehaviour
    public AudioClip gunShot; //audio for gunshot
    AudioSource source;
 
-   public Sprite idleGun;
-   public Sprite shotGun;
+   public GameObject bulletHole;
+
+
 /* End of GUN Value Vars */
 
 /* AMMO Vars */
@@ -46,7 +47,7 @@ public class Gun : MonoBehaviour
     {
         
         ammoText.text = ammoClipLeft + " / " + ammoLeft;
-        if(Input.GetButtonDown("Fire1")) //fire1 = left mouse click
+        if(Input.GetButtonDown("Fire1") && isReloading == false) //fire1 = left mouse click
         {
             isShot = true;
         }
@@ -58,7 +59,7 @@ public class Gun : MonoBehaviour
     }
    void FixedUpdate()
    {
-       Ray raycast = Camera.main.ScreenPointToRay(Input.mousePosition); //sets the ray cast to the mouse
+       Ray raycast = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2)); //sets the ray cast to the middle of the screen
        RaycastHit hit;
        if(isShot == true && ammoClipLeft > 0 && isReloading == false){ 
         ammoClipLeft--;
@@ -71,15 +72,19 @@ public class Gun : MonoBehaviour
         {
             Debug.Log("I hit " + hit.collider.gameObject.name);
             hit.collider.gameObject.SendMessage("gunHit", gunDamage, SendMessageOptions.DontRequireReceiver);
+
+            Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up,hit.normal));
+
+            //Quaternion is like a fancy way of saying rotation. Quternion.FromToRotation will allow the player to see bullet holes in the correct position no matter the platform.
         }
 
-       }else if(isShot == true && ammoClipLeft <= 0) 
+       }else if(isShot == true && ammoClipLeft <= 0) //if ammoclip is 0, reload
        {
            isShot = false;
            Reload();
 
        }
-          if(Input.GetKeyDown(KeyCode.R))
+          if(Input.GetKeyDown(KeyCode.R) && isReloading == false) //press r to reload
        {
             Reload();
        }
@@ -89,13 +94,13 @@ public class Gun : MonoBehaviour
     void Reload() //function for reloading gun
     {
         int bulletsToReload = ammoClipSize - ammoClipLeft;
-        if(ammoLeft >= bulletsToReload)
+        if(ammoLeft >= bulletsToReload) //subtract amount of bullets loaded into clip
         {
             StartCoroutine("ReloadWeapon");
             ammoLeft -= bulletsToReload;
             ammoClipLeft = ammoClipSize;
 
-        } else if(ammoLeft < bulletsToReload && ammoLeft > 0)
+        } else if(ammoLeft < bulletsToReload && ammoLeft > 0) //if clip is 0, add the ammo that is needed
             {   
                 StartCoroutine("ReloadWeapon");
                 ammoClipLeft += ammoLeft;
@@ -111,7 +116,7 @@ public class Gun : MonoBehaviour
 
 
    }
-    IEnumerator ReloadWeapon()
+    IEnumerator ReloadWeapon() //wait 2 seconds to reload before you can shoot
     {
         isReloading = true;
         source.PlayOneShot(reloadGun);
@@ -121,9 +126,9 @@ public class Gun : MonoBehaviour
 
    IEnumerator shot()
    {
-       GetComponent<SpriteRenderer>().sprite = shotGun;
+     
        yield return new WaitForSeconds(0.1f); //suspends the coroutine execution for the given amount of seconds using scaled time
-       GetComponent<SpriteRenderer>().sprite = idleGun;
+     
    }
 
 }
