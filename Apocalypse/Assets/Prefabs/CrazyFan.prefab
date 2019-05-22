@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2829870129464283939}
   - component: {fileID: 2829870129464283948}
   - component: {fileID: 2829870129464283949}
+  - component: {fileID: 6612398527938607990}
   - component: {fileID: 2829870129464283950}
   m_Layer: 0
   m_Name: CrazyFan
@@ -115,8 +116,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.65352964, y: 1.9077353, z: 0.2}
-  m_Center: {x: -0.03753066, y: -0.11279893, z: 0}
+  m_Size: {x: 1.3276758, y: 2.0947862, z: 0.2}
+  m_Center: {x: -0.04024458, y: -0.01927352, z: 0}
 --- !u!114 &2829870129464283943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,14 +192,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2829870129464283940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 936373f294dfb4095ae6760a49c19fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distThresh: 0
   prey: {fileID: 0}
-  forceAmt: 2
+  forceAmt: 0
+--- !u!114 &6612398527938607990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829870129464283940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc76f6d7119c5aa48a8ebe79c702a46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!195 &2829870129464283950
 NavMeshAgent:
   m_ObjectHideFlags: 0
