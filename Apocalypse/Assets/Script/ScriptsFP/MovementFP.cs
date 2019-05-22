@@ -29,6 +29,8 @@ public class MovementFP : MonoBehaviour
         Cursor.visible = false; //hides the cursor once i hit play
         Cursor.lockState = CursorLockMode.Locked;
 
+    
+
     }
 
     void Update()
@@ -90,6 +92,13 @@ public class MovementFP : MonoBehaviour
       
         SceneManager.LoadScene("WinFP");
         }
+
+          if (col.gameObject.tag == "Pred") 
+        {
+      
+        SceneManager.LoadScene("LoseFP");
+        }
       
     }
+    
 }

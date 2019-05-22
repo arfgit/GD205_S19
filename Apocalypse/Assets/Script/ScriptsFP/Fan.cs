@@ -37,7 +37,7 @@ public class Fan : MonoBehaviour
     void Death(){
         if(hP <= 0)
         {
-             //Destroy(gameObject);
+             Destroy(gameObject);
             
         }
 
